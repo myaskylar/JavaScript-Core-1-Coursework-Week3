@@ -21,4 +21,5 @@ var pairs = pairsByIndex.map(function (indexes) {
   return [student, mentor];
 });
 
+
 console.log(pairs);
