@@ -8,13 +8,9 @@
 */
 
 function capitalise(str) {
-   let strChangeArr = str.split(" ");
-   for (var i = 0; i < strChangeArr.length; i++) {
-     strChangeArr[i] =
-       strChangeArr[i].charAt(0).toUpperCase() + strChangeArr[i].slice(1);
-   }
-   let newStr = strChangeArr.join(" ");
-   return newStr;
+   let strChangeArr = str.split('');
+   strChangeArr[0] = strChangeArr[0].toUpperCase();
+   return strChangeArr.join('');
 }
 
 /* 
