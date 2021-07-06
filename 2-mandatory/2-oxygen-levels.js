@@ -12,12 +12,14 @@
 */
 
 function findSafeOxygenLevel(arr) {
-  let planetsWithOxygen = arr.filter(elem => elem.includes("%"));
-  let planets = planetsWithOxygen.map((elem) => elem.replace(/%/g, ""));
-  let changeToNum = planets.map(Number);
-  let firstSafePlanet = changeToNum.find((num) => num > "19.5" && num < "23.5");
-
-  return firstSafePlanet ? firstSafePlanet + "%" : firstSafePlanet;
+   let planetsWithOxygen = arr.filter((elem) => elem.includes("%"));
+   let safePlanets = planetsWithOxygen
+     .map((elem) => elem.replace(/%/g, ""))
+     .map(Number);
+   let firstSafePlanet = safePlanets.find(
+     (num) => num > "19.5" && num < "23.5"
+   );
+   return firstSafePlanet ? firstSafePlanet + "%" : firstSafePlanet;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
