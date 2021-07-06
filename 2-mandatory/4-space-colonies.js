@@ -16,11 +16,9 @@
 */
 
 function getSettlers(arr) {
-  let familyStartsWithA = arr.filter(names => {
-    if (names.starsWith("A") && names.includes("family"))
-    return names;
+  return familyStartsWithA = arr.filter(names => {
+    return names.starsWith("A") && names.includes("family");
   });
-  return familyStartsWithA;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
