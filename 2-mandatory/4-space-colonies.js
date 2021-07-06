@@ -16,12 +16,11 @@
 */
 
 function getSettlers(arr) {
-  let onlyFamily = [];
-  arr.map((elem) => {
-    if (elem.includes("family")) onlyFamily.push(elem);
+  let familyStartsWithA = arr.filter(names => {
+    if (names.starsWith("A") && names.includes("family"))
+    return names;
   });
-  let aFamily = onlyFamily.filter((names) => names.startsWith("A"));
-  return aFamily;
+  return familyStartsWithA;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
